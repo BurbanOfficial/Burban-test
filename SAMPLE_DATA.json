@@ -1,0 +1,81 @@
+{
+  "products": [
+    {
+      "title": "Classic Hoodie",
+      "slug": "classic-hoodie",
+      "description": "Hoodie minimaliste en coton premium",
+      "sku": "HOOD-001",
+      "price": 89,
+      "stripePrice": "price_1234567890",
+      "images": [
+        "https://images.unsplash.com/photo-1556821552-5f0d0f8e8e8e?w=500",
+        "https://images.unsplash.com/photo-1556821552-5f0d0f8e8e8e?w=500"
+      ],
+      "colors": [
+        {
+          "name": "Black",
+          "hex": "#000000",
+          "images": ["https://images.unsplash.com/photo-1556821552-5f0d0f8e8e8e?w=500"]
+        },
+        {
+          "name": "White",
+          "hex": "#FFFFFF",
+          "images": ["https://images.unsplash.com/photo-1556821552-5f0d0f8e8e8e?w=500"]
+        }
+      ],
+      "sizes": ["XS", "S", "M", "L", "XL", "XXL"],
+      "category": "men",
+      "subcategory": "hoodies",
+      "tags": ["hoodie", "casual", "streetwear"],
+      "featured": true,
+      "stock": 50,
+      "seo": {
+        "title": "Classic Hoodie - BURBAN",
+        "description": "Hoodie minimaliste en coton premium. Livraison gratuite.",
+        "ogImage": "https://images.unsplash.com/photo-1556821552-5f0d0f8e8e8e?w=1200"
+      },
+      "createdAt": 1704067200000,
+      "updatedAt": 1704067200000
+    }
+  ],
+  "categories": [
+    {
+      "name": "Men",
+      "slug": "men",
+      "description": "Collection homme"
+    },
+    {
+      "name": "Women",
+      "slug": "women",
+      "description": "Collection femme"
+    }
+  ],
+  "banners": [
+    {
+      "type": "text",
+      "content": "Livraison gratuite dès 100€",
+      "buttonText": "Découvrir",
+      "buttonLink": "/products",
+      "duration": 5,
+      "active": true,
+      "order": 0
+    },
+    {
+      "type": "text",
+      "content": "Retour gratuit 30 jours",
+      "buttonText": "En savoir plus",
+      "buttonLink": "/returns",
+      "duration": 5,
+      "active": true,
+      "order": 1
+    }
+  ],
+  "pages": [
+    {
+      "slug": "about",
+      "title": "À propos",
+      "type": "about",
+      "content": "<h2>Notre histoire</h2><p>BURBAN est une marque de streetwear minimaliste fondée en 2024...</p>"
+    }
+  ]
+}

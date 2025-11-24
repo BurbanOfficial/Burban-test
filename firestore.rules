@@ -1,0 +1,49 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    // Public read access to products, categories, banners, pages
+    match /products/{document=**} {
+      allow read;
+    }
+    match /categories/{document=**} {
+      allow read;
+    }
+    match /banners/{document=**} {
+      allow read;
+    }
+    match /pages/{document=**} {
+      allow read;
+    }
+    match /sizeGuides/{document=**} {
+      allow read;
+    }
+
+    // User data - only accessible by the user
+    match /users/{userId} {
+      allow read, write: if request.auth.uid == userId;
+    }
+
+    // Orders - only accessible by the user who created them
+    match /orders/{orderId} {
+      allow read: if request.auth.uid == resource.data.userId;
+      allow create: if request.auth.uid != null;
+    }
+
+    // Admin only - products, categories, banners, pages write access
+    match /products/{document=**} {
+      allow write: if request.auth.token.admin == true;
+    }
+    match /categories/{document=**} {
+      allow write: if request.auth.token.admin == true;
+    }
+    match /banners/{document=**} {
+      allow write: if request.auth.token.admin == true;
+    }
+    match /pages/{document=**} {
+      allow write: if request.auth.token.admin == true;
+    }
+    match /sizeGuides/{document=**} {
+      allow write: if request.auth.token.admin == true;
+    }
+  }
+}
